@@ -620,7 +620,7 @@ try:
     for col in ["pe", "pb", "dy"]:
         if col in regime_df.columns:
             display_cols.append(col)
-    latest_view = regime_df[display_cols].tail(100).copy()
+    latest_view = regime_df[display_cols].tail(1000).copy()
     if "drawdown" in latest_view.columns:
         latest_view["drawdown"] = (latest_view["drawdown"] * 100).round(2)
     st.dataframe(latest_view, use_container_width=True)
