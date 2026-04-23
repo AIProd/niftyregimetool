@@ -355,6 +355,7 @@ def compute_regime_frame(
 
         if macro_signal_parts:
             df["macro_score"] = macro_weight * np.sum(macro_signal_parts, axis=0)
+            df["macro_score"] = 0.0
         else:
             df["macro_score"] = 0.0
     else:
